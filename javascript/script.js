@@ -6,10 +6,11 @@
 // compararsion operator
 // ==,===, !=
 // logical operator
+// || , &&
 // assignment operator
 // ternary operator
 // increment / decrement operator
-// condtion statement
+// condtion statement ( if,else,else if)
 
 console.log(2 + 2);
 console.log(10 - 2);
@@ -58,4 +59,64 @@ if (myNumber % 2 == 0) {
   console.log("It is even");
 } else {
   console.log("It is Odd");
+}
+// service now
+
+// Logical Operators
+var isLoginedWithGoogle = true;
+var isLoginedWithApple = false;
+
+// Any one of the condtion has to true then it will return true
+// OR example
+// if (isLoginedWithGoogle || isLoginedWithApple) {
+//   // alert("Your are on the dashboard");
+// }
+
+// And Example
+// if (email == "example@gmail.com" && password == "123456") {
+//   alert("Your are on the Home Page");
+// }
+
+//  condtion ? statement1 : statement2
+
+var age = 18;
+age >= 18
+  ? console.log("Your Eligble for vote")
+  : console.log("Your not eligble for vote");
+
+// Increment(++) and Decrement(--)
+// Increment the value by one and decrement the value value
+
+var myNumber = 10;
+myNumber++;
+console.log(myNumber);
+myNumber--;
+console.log(myNumber);
+
+// temparature
+var temparature = 35;
+// if the temperature is less than 20 then show too cold
+// if the temperature is greater than 20 and less than 30 it is cool
+// if the temperature is greater than 30 and less 35 moderate
+// if the temperature is greater than 35 it too hot
+
+if (temparature <= 20) {
+  console.log("The climate is too cool");
+} else if (temparature > 20 && temparature <= 30) {
+  console.log("The climate is cool");
+} else if (temparature > 30 && temparature <= 35) {
+  console.log("The climate is moderate");
+} else {
+  console.log("Theclimate is too hot");
+}
+
+// For every loop 3 things will be there
+// intiliazation : starting point
+// condtion :
+// increment/decrement
+
+// for(initliazation;condition;i++)
+
+for (var i = 1; i <= 100; i++) {
+  console.log(i);
 }
