@@ -106,7 +106,7 @@ var myName = "shiva rama raju";
 // includes
 // indexOf
 // lastIndexOf
-// split 
+// split
 // substring
 // contact
 // toLowerCase()

@@ -41,11 +41,13 @@ var myFunc = function () {
 console.log(myFunc);
 myFunc();
 
-(function () {
-  console.log(
-    "I Am an Anomonous Function And I am Self Execution Function also"
-  );
+(function iamSelfExecutionFunc() {
+  console.log(" I am Self Execution Function also");
 })();
+
+// document.addEventListener("click", function () {
+//   alert("Hello");
+// });
 
 var calcGst = function (ammount, gst = 18) {
   // falsy values and truthy
