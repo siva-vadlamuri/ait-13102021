@@ -21,3 +21,18 @@ var pTags = document.getElementsByTagName("p");
 var thirdLists = document.querySelectorAll(".javascript");
 thirdLists[1].style.color = "red";
 thirdLists[0].style.color = "red";
+
+const arr = [23, [45, 78, [23, 89, [34, 78, [45, 78, [34, 77]]]]]];
+const finalArray = [];
+function flatternArray(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      return flatternArray(arr[i]);
+    } else {
+      finalArray.push(arr[i]);
+    }
+  }
+}
+
+flatternArray(arr);
+console.log(finalArray);
