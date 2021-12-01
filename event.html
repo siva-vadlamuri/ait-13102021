@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      .btn {
+        padding: 0.5rem 0.75rem;
+        background-color: lightblue;
+        border: none;
+        outline: none;
+        border-radius: 0.25rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <!-- 1st Method -->
+      <!-- <button onclick="btnClick()" class="btn">Click</button> -->
+      <button class="btn">Click</button>
+    </section>
+
+    <script>
+      var btn = document.querySelector(".btn");
+      //   2 Method
+      //   btn.onclick = function btnClick() {
+      //     alert("Button Clicked");
+      //   };
+      btn.addEventListener("click", function () {
+        alert("Button Clicked");
+      });
+    </script>
+  </body>
+</html>
