@@ -1,3 +1,5 @@
+// getElementById
+// querySelector
 // Step-1 Select an Element In HTML
 // Step-2 Prepare Dynamic HTML using JavaScript
 // Step-3 Append Dynamic HTML to the Document
@@ -214,7 +216,9 @@ var users = [
 ];
 
 var dynamicHTML = "";
+
 for (var i = 0; i < users.length; i++) {
+  debugger;
   dynamicHTML += "<tr>";
   dynamicHTML += "<td>" + users[i].id + "</td>";
   dynamicHTML += "<td>" + users[i].name + "</td>";
