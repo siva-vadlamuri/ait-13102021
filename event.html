@@ -22,17 +22,80 @@
       <!-- 1st Method -->
       <!-- <button onclick="btnClick()" class="btn">Click</button> -->
       <button class="btn">Click</button>
+      <button class="btn2">Double Click</button>
     </section>
+    <section class="lead__text">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, aliquid?
+        Aliquam sed officiis assumenda pariatur repellendus sint voluptatem
+        dolores sunt.
+      </p>
+    </section>
+    <section>
+      <form>
+        <input type="text" name="" id="firstName" />
+        <input type="text" name="" id="lastName" />
+        <input type="email" name="" id="email" />
+        <input type="password" name="" id="password" />
+      </form>
+    </section>
+
+    <!-- Events  -->
 
     <script>
       var btn = document.querySelector(".btn");
+      var btn2 = document.querySelector(".btn2");
+      var leadText = document.querySelector(".lead__text");
+      var firstName = document.querySelector("#firstName");
+      var lastName = document.querySelector("#lastName");
       //   2 Method
       //   btn.onclick = function btnClick() {
       //     alert("Button Clicked");
       //   };
+      for (let i = 0; i < 100000; i++) {
+        console.log(i);
+      }
+      console.log("After for loop");
       btn.addEventListener("click", function () {
         alert("Button Clicked");
       });
+      btn2.addEventListener("dblclick", function () {
+        alert("Button Clicked");
+      });
+      leadText.addEventListener("mouseover", function () {
+        // alert("Mouse Hover");
+        // leadText.bgColor = "blue";
+        leadText.style.backgroundColor = "blue";
+        leadText.style.color = "#fff";
+      });
+      leadText.addEventListener("mouseleave", function () {
+        // alert("Mouse Hover");
+        // leadText.bgColor = "blue";
+        leadText.style.backgroundColor = "#fff";
+        leadText.style.color = "#000";
+      });
+      firstName.addEventListener("focus", function () {
+        firstName.value = "Focus Stated";
+      });
+      firstName.addEventListener("blur", function () {
+        firstName.value = "blur method";
+      });
+      lastName.addEventListener("change", function () {
+        console.log(lastName.value);
+      });
+
+      // Keyboard Events
+      document.addEventListener("keyup", function (e) {
+        console.log(e.key, e.code);
+      });
+      // document.addEventListener("keypress", function (e) {
+      //   console.log(e.key, e.code);
+      // });
+
+      // form Events
+      // focus
+      // blur
+      // change
     </script>
   </body>
 </html>
