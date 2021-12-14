@@ -1,0 +1,44 @@
+[
+    {
+        "id" : 1,
+        "name" : "John",
+        "email" : "john@example.com",
+        "phone": "123-456-789",
+        "hobbies": ["Coding","Cricket","Pubg","Book"],
+        "address" : {
+            "streetAddress" : "272 6th main road",
+            "postalCode" : 533287,
+            "city": "Bangalore",
+            "state": "Karntaka"
+        },
+        "isMarried": false
+    },
+    {
+        "id" : 1,
+        "name" : "John",
+        "email" : "john@example.com",
+        "phone": "123-456-789",
+        "hobbies": ["Coding","Cricket","Pubg","Book"],
+        "address" : {
+            "streetAddress" : "272 6th main road",
+            "postalCode" : 533287,
+            "city": "Bangalore",
+            "state": "Karntaka"
+        },
+        "isMarried": false
+    },
+    {
+        "id" : 1,
+        "name" : "John",
+        "email" : "john@example.com",
+        "phone": "123-456-789",
+        "hobbies": ["Coding","Cricket","Pubg","Book"],
+        "address" : {
+            "streetAddress" : "272 6th main road",
+            "postalCode" : 533287,
+            "city": "Bangalore",
+            "state": "Karntaka"
+        },
+        "isMarried": false
+    }
+]

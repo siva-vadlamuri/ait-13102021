@@ -4,6 +4,11 @@
 
 // Everything in JavaScript is execute in Execution Context
 
+x();
+function x() {
+  console.log("I am x");
+}
+
 var myFunc = function () {
   console.log("I am a FUnction");
 };
