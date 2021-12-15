@@ -58,9 +58,9 @@ var calcGst = function (ammount, gst = 18) {
   // 5 0
   // !false = true
 
-  //   if (!gst) {
-  //     gst = 18;
-  //   }
+  // if (!gst) {
+  //   gst = 18;
+  // }
   //   console.log(ammount, gst);
   //   10000 + 1200 == 11200
   // 1000,10%

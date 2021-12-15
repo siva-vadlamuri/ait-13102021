@@ -296,3 +296,83 @@ console.log(id, image, price, count);
 // Template String Literal
 // console.log('The Product id '+ id + 'And Price is'+ price + ' There are ')
 console.log(`The Product  id ${id} and Price is ${price} `);
+
+// Default parameters
+// Spreed and Rest Operator (...);
+
+// Rest Operator (...params)
+// The rest parameter syntax allows a function to accept an indefinite number of arguments as an array,
+
+// const calcSum = function (...params) {
+//   console.log(params);
+//   return a + b + c + d;
+// };
+// calcSum(20, 30, 60, 12, 30, 35, 66);
+
+// Spreed Operator
+// It is used to spreed the elements
+
+const calcTotal = function (a, b) {
+  console.log(a + b);
+};
+
+const arr2 = [23, 67, 74, 12, 45, 67];
+const arr3 = [45, 77, 22, 12, 45, 99];
+const arr4 = [...arr2, ...arr3];
+console.log(arr4);
+console.log(arr2);
+console.log(...arr2);
+calcTotal(...arr2);
+const obj2 = {
+  firstName: "Mr",
+  lastName: "Sharma",
+  location: "bangalore",
+};
+console.log(obj2);
+// obj2.location = "hyderbad";
+const obj3 = { ...obj2, location: "hyderbad" };
+console.log(obj3);
+
+// The Promise is an Object which will return single value in future
+
+// Promises
+// i will lose the weight by 5kg by next month
+// 15/12/21 --> 15/01/2022
+
+// 3 states
+// Pending
+// Fullfilled
+// Rejected
+
+const p = new Promise(function (resolved, rejected) {
+  const num = 10;
+  setTimeout(function () {
+    if (num == 20) {
+      resolved("Success we got the data");
+    } else {
+      rejected("We got a Error");
+    }
+  }, 2000);
+});
+
+p.then(function (res) {
+  console.log(res);
+}).catch(function (res) {
+  console.log(` Error was occured ${res}`);
+});
+
+// Arrow Functions
+// 1
+function ourFunc() {
+  console.log(this);
+}
+// 2
+const myFunc = function () {
+  console.log(this);
+};
+// Arrow functions
+const calcFunc = (num) => {
+  console.log(num * num);
+  console.log(this);
+};
+calcFunc(10);
