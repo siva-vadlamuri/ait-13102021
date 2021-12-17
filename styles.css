@@ -10,3 +10,14 @@
 .p-1 {
   padding: 1rem;
 }
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(10px, auto);
+}

@@ -15,27 +15,48 @@ const displayTheData = function (data) {
   }
 };
 
-btn.addEventListener("click", function () {
-  // XmlHTTPRequest
-  //
-  const xhr = new XMLHttpRequest();
-  // open
-  // 'GET',url,true
-  console.log(xhr.readyState);
-  xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
-  console.log(xhr.readyState);
-  // console.log(xhr.readyState);
-  // xhr.onprogress
-  xhr.onload = function () {
-    // console.log(xhr.readyState);
-    // readyState 4 and status code has to be 200 OK
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      // console.log(xhr.responseText);
-      displayTheData(xhr.responseText);
-    }
-  };
-  xhr.send();
+// ES6 way of getting the data
+// function getTheUserData() {
+//   // xml
+//   fetch("https://jsonplaceholder.typicode.com/users").then((res) => {
+//     res.json().then((data) => console.log(data));
+//   });
+// }
+
+// ES6 was released on 2015
+// ES7 was released on 2016 (async and await)
+// If the promise is converted from pending to resolved or rejected
+async function getTheUserData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
+  console.log(data);
+}
+
+btn.addEventListener("click", () => {
+  getTheUserData();
 });
+
+// btn.addEventListener("click", function () {
+//   // XmlHTTPRequest
+//   //
+//   const xhr = new XMLHttpRequest();
+//   // open
+//   // 'GET',url,true
+//   console.log(xhr.readyState);
+//   xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+//   console.log(xhr.readyState);
+//   // console.log(xhr.readyState);
+//   // xhr.onprogress
+//   xhr.onload = function () {
+//     // console.log(xhr.readyState);
+//     // readyState 4 and status code has to be 200 OK
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//       // console.log(xhr.responseText);
+//       displayTheData(xhr.responseText);
+//     }
+//   };
+//   xhr.send();
+// });
 
 console.log("First console");
 // Timeout

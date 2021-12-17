@@ -354,7 +354,7 @@ const p = new Promise(function (resolved, rejected) {
     }
   }, 2000);
 });
-
+// If you pass a function as an argument to another function then it is called callback function
 p.then(function (res) {
   console.log(res);
 }).catch(function (res) {
@@ -363,16 +363,108 @@ p.then(function (res) {
 
 // Arrow Functions
 // 1
+
+// You can access a function before its declaration --> Hoisting
+ourFunc();
+
 function ourFunc() {
   console.log(this);
 }
 // 2
+// Function Expression or Variable Function
+// debugger;
 const myFunc = function () {
   console.log(this);
 };
+myFunc();
 // Arrow functions
+// Short Hand of Writting Functions
 const calcFunc = (num) => {
   console.log(num * num);
   console.log(this);
 };
 calcFunc(10);
+
+// 2 more loops for of and for in
+const techCompanies = [
+  "Apple",
+  "Amazon",
+  "Meta",
+  "Netflix",
+  "Microsoft",
+  "Google",
+];
+for (let value of techCompanies) {
+  console.log(value);
+}
+
+const companies = {
+  yt: "youtube",
+  fb: "facebook",
+  ig: "instagram",
+  tw: "Twitter",
+  ait: "achieversit",
+};
+// console.log(companies["fb"]);
+for (let value in companies) {
+  console.log(companies[value]);
+}
+
+// map, filter, reduce are array methods
+// map and filter are used to create new array as a end result
+
+const nums = [1, 2, 3, 4, 5, 6, 7];
+// Double the Values
+// let doubleTheValues = [];
+// for (let num of nums) {
+//   doubleTheValues.push(num * 2);
+// }
+// console.log(doubleTheValues);
+
+// The map method calls the callbackfn function one time for each element in the array
+const doubleTheValues = nums.map((num) => num * 2);
+console.log(doubleTheValues);
+
+// filter is to filter the data
+const usersData = [
+  {
+    id: 1,
+    name: "sai sweetha",
+    age: 23,
+  },
+  {
+    id: 2,
+    name: "Deepu",
+    age: 40,
+  },
+  {
+    id: 3,
+    name: "Ashish",
+    age: 25,
+  },
+  {
+    id: 4,
+    name: "Vardhini",
+    age: 26,
+  },
+];
+
+// calculate difference between ages of users and return the users whose age is greater than 25 and less than 30  and return the users whose age is greater than 25 and less than 30
+
+// cal
+
+const filteredUsers = usersData.filter(
+  (user) => user.age < 25 || user.age > 30
+);
+console.log(filteredUsers);
+
+// reduce is also an array method, it is used to reduce into a single
+// total = 0
+// age = 25
+// total + age
+// reduce, Object Oriented Programming
+// reduce will take two arguments
+// 1st  call back function
+// 2nd The Intital Value of Total (accumalator)
+const totalAge = usersData.reduce((total, user) => total + user.age, 0);
+console.log(totalAge);
